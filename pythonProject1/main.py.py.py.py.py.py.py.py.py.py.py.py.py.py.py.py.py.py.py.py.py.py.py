@@ -61,4 +61,11 @@ if start == "P":
                 if your_hero.hp <= 0:
                     print("ти програв")
                     break
+                else:
+                    ratt.hp -= your_hero.attack
+                    if ratt.hp <= 0:
+                        print("ви перемогли")
+                        your_hero.money += 20
+                        break
+
 print("Життя:", your_hero.hp, "Монети:", your_hero.money, "Атака:", your_hero.attack)
