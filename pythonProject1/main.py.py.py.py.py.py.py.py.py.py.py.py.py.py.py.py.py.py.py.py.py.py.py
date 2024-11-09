@@ -62,4 +62,3 @@ if start == "P":
                     print("ти програв")
                     break
 print("Життя:", your_hero.hp, "Монети:", your_hero.money, "Атака:", your_hero.attack)
-print("Життя боса:", ratt.hp)
