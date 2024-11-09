@@ -15,12 +15,12 @@ class stats:
 your_hero = stats()
 sg = 0
 battle = 0
+finish = 0
 class enemy:
    def __init__(self):
        self.hp = 20
        self.attak = 3
 ratt = enemy()
-while
 start = input("Магазин(N), Печера(P)")
 
 
@@ -44,28 +44,22 @@ print("Життя:", your_hero.hp, "Монети:", your_hero.money, "Атака
 
 if start == "P":
    print("ви знайшли крису")
-   while battle < 2:
+   while True :
        battle = input("атака(A), убігти(R)")
        if battle == "A":
-           hod =randint(1,3)
+           print("Життя:", your_hero.hp, "Монети:", your_hero.money, "Атака:", your_hero.attack)
+           print("Життя боса:", ratt.hp)
+           hod =randint(1,2)
            if hod == 1:
                ratt.hp -= your_hero.attack
-               if ratt.hp >=0:
+               if ratt.hp <=0:
                    print("ви перемогли")
                    your_hero.money += 20
-                   battle = 2
-               else:
-                   your_hero.hp -= ratt.attak
-                   if your_hero.hp <=0:
-                       print("ти програв")
-                   else:
-                       battle = 0
-       else:
-           your_hero.hp -= ratt.attak
-           if your_hero.hp <= 0:
-               print("ти програв")
+                   break
            else:
-               battle = 0
-
-
-
+                your_hero.hp -= ratt.attak
+                if your_hero.hp <= 0:
+                    print("ти програв")
+                    break
+print("Життя:", your_hero.hp, "Монети:", your_hero.money, "Атака:", your_hero.attack)
+print("Життя боса:", ratt.hp)
