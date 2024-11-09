@@ -67,5 +67,6 @@ if start == "P":
                         print("ви перемогли")
                         your_hero.money += 20
                         break
-
+       if battle == "R":
+           print("бийся трус")
 print("Життя:", your_hero.hp, "Монети:", your_hero.money, "Атака:", your_hero.attack)
